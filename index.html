@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Rock Paper Scissors</title>
+    </head>
+    <body>
+        <h1>To play this game open console in dev tools of browser and type 'game()' and press Enter</h1>
+        <script>
+            <!-- Rock Paper Scissors Javascript code here-->
+
+            function computerPlay(){
+                <!-- we gernerate a random_number between 0 and 1 --!>
+                <!-- and then use this number to decide the computer play --!>
+
+                let random_number = Math.random();
+                
+                if(random_number <=0.33)
+                return "Rock";
+                else if( random_number > 0.66)
+                return "Paper";
+                else 
+                return "Scissors";
+            }
+            
+            function playRound( playerSelection , computerSelection){
+
+                playerSelection = playerSelection.toUpperCase();
+                computerSelection = computerSelection.toUpperCase();
+
+                if( playerSelection == computerSelection)
+                return "It's a tie! No one wins!";
+
+                if( playerSelection == "ROCK")
+                {
+                    if (computerSelection == "PAPER")
+                    return "Computer wins this round! Paper beats Rock!";
+
+                    if (computerSelection == "SCISSORS")
+                    return  "You win this round! Rock beats Scissors";
+
+                }
+
+                if( playerSelection == "PAPER")
+                {
+                    if (computerSelection == "ROCK")
+                    return "You win this round! Paper beats Rock!";
+
+                    if (computerSelection == "SCISSORS")
+                    return  "Computer wins this round! Scissors beats Paper";
+
+                }
+
+                if( playerSelection == "SCISSORS")
+                {
+                    if (computerSelection == "ROCK")
+                    return "Computer wins this round! Rock beats Scissors!";
+
+                    if (computerSelection == "PAPER")
+                    return  "You win this round! Scissors beats Paper";
+
+                } else
+                return "wrong input! try again with rock, paper or scissors!";               
+            }
+            
+            function game(){
+                alert( "Welcome to Rock Paper Scissors rounds against computer!");
+                
+                let userInput;
+
+                let score = 0;
+                let maxScore = 5;
+
+                let roundResult;
+
+                for( let i=0; i <= 4; i++)
+                {
+                    userInput = prompt(" Enter Rock, Paper or Scissor below (not literally LOL)!");
+
+                    roundResult = playRound( userInput , computerPlay() );
+                    
+                    alert(roundResult);
+
+                    if(roundResult.indexOf("You") != -1)
+                    score ++;
+
+                    if(roundResult.indexOf("wrong") != -1)
+                    i--;
+                    
+                    if(roundResult.indexOf("tie") != -1)
+                    maxScore--;
+
+                }
+                if ((maxScore-score) < score)
+                alert(`You win the game by ${score} - ${maxScore-score}`);
+                else if((maxScore-score) == score)
+                alert(`You tied the game by ${score} - ${maxScore-score}`);
+                else
+                alert(`You lose the game by ${score} - ${maxScore-score}`);
+            }
+            game();
+        </script>
+    </body>
+</html>
