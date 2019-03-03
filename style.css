@@ -1,0 +1,23 @@
+body{
+    background-image: url("https://i.imgur.com/SqdIfgF.gif");
+    background-size: 35%;
+    font-family: Calibri;
+}
+
+.container {
+    display: block;
+    text-align: center;
+    background-color:crimson;
+    margin: 5px auto;
+    border: 10px solid brown;
+}
+#roundResult {
+    display: block;
+    text-align: center;
+    background-color: crimson;
+    font-size: 40px;
+}
+.inputButtons {
+    text-align:center;
+
+}
