@@ -1,23 +1,55 @@
 body{
     background-image: url("https://i.imgur.com/SqdIfgF.gif");
     background-size: 35%;
-    font-family: Calibri;
+    font-family: Helvetica;
 }
 
 .container {
     display: block;
     text-align: center;
-    background-color:crimson;
-    margin: 5px auto;
-    border: 10px solid brown;
+    background-image:-webkit-linear-gradient(top,rgb(243, 130, 130),crimson);
+    margin: 10px auto;
+    border: 3px solid black;
 }
+
+#instruction {
+    display: block;
+    text-align: center;
+    background-image: -webkit-linear-gradient(top,rgb(243, 130, 130),crimson);
+    border: 3px solid black;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
 #roundResult {
     display: block;
     text-align: center;
-    background-color: crimson;
-    font-size: 40px;
+    background-image: -webkit-linear-gradient(top,rgb(243, 130, 130),crimson);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Georgia;
 }
-.inputButtons {
-    text-align:center;
 
+.inputButtons, #final {
+    margin : 20px auto;
+    padding: 2px auto;
+    display: block;
+    text-align: center;
 }
+.userInput, #restart{
+    box-sizing: border-box;
+    font-weight: bold;
+    height: 30px;
+    width: 100px;
+    background-image: -webkit-linear-gradient(top,white,grey);
+    border-style: none;
+    border-bottom-color: black;
+    border-radius: 10px;
+    font-family: arial,sans-serif;
+    position: relative;
+    text-align: center;
+}
+
+

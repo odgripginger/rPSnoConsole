@@ -83,6 +83,8 @@ function gameEnd (){
     finalResult.textContent =`You tied the game by ${score} - ${maxScore-score}`;
     else
     finalResult.textContent =`You lose the game by ${score} - ${maxScore-score}`;
+
+    finalRdiv.classList.toggle("hidden");
 }
 
 
@@ -122,6 +124,7 @@ function report(e) {
     
     if(result.indexOf("tie") != -1)
     maxScore--;
+
 
     }
 
