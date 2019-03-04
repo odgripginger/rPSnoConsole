@@ -9,14 +9,16 @@ body{
     text-align: center;
     background-image:-webkit-linear-gradient(top,rgb(243, 130, 130),crimson);
     margin: 10px auto;
-    border: 3px solid black;
+    border: 3px solid white;
+    border-radius: 20px;
 }
 
 #instruction {
     display: block;
     text-align: center;
     background-image: -webkit-linear-gradient(top,rgb(243, 130, 130),crimson);
-    border: 3px solid black;
+    border: 3px solid white;
+    border-radius: 20px;
 }
 
 .hidden {
@@ -26,7 +28,7 @@ body{
 #roundResult {
     display: block;
     text-align: center;
-    background-image: -webkit-linear-gradient(top,rgb(243, 130, 130),crimson);
+    /*background-image: -webkit-linear-gradient(top,rgb(243, 130, 130),crimson);*/
     font-size: 20px;
     font-weight: bold;
     font-family: Georgia;
